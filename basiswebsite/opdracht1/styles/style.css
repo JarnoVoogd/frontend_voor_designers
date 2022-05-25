@@ -85,7 +85,7 @@ h1:hover span {
 	position:absolute;
 	display: block;  
 	animation-name: jump-up;
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 	animation-iteration-count:infinite;
 	animation-timing-function: linear;
 	/* color: red; */
@@ -121,7 +121,7 @@ h1:hover span:nth-of-type(8) {
 }
 
 /* after circel toevoegen */
-h1::after {
+ h1::after {
 	content: "";
 	left: 2em;
 	bottom: 20%;
@@ -143,7 +143,24 @@ h1::after {
 		var(--spitfirered) 330deg 360deg); 
 	border-radius: 50%;
 	position: absolute;
+
+	
 }  
+
+h1:hover::after {
+	animation-name: spin;
+  	animation-duration:1.5s;
+  	animation-iteration-count:infinite;
+	
+  	animation-timing-function:linear;
+  
+}
+
+@keyframes spin {
+	100% {
+	  transform:rotate(1turn);
+	}
+  }
 
 @media (prefers-color-scheme: dark) {
 	h1 span {
